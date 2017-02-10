@@ -8,5 +8,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\SDVector.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\SDVector.h" />
   </ItemGroup>
 </Project>
