@@ -9,8 +9,14 @@
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\SDVector.cpp" />
+    <ClCompile Include="src\AppScene.cpp" />
+    <ClCompile Include="src\Window.cpp" />
+    <ClCompile Include="src\Graphics.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\SDVector.h" />
+    <ClInclude Include="src\AppScene.h" />
+    <ClInclude Include="src\Window.h" />
+    <ClInclude Include="src\Graphics.h" />
   </ItemGroup>
 </Project>

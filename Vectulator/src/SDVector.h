@@ -13,6 +13,9 @@ public:
 	SDVector2(std::string vectorName,float x,float y);
 	~SDVector2();
 
+	void PrintVector(float x, float y);
+	void DrawVector();
+
 	//getters
 	float& GetX() { return m_x; }
 	float& GetY() { return m_y; }
@@ -26,7 +29,7 @@ private:
 	float m_x;
 	float m_y;
 	std::string m_vectorName;
-
+	//sf::Vertex line;
 };
 
 #endif
