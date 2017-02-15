@@ -10,20 +10,28 @@ SDVector class is a class to wrap all the main vector functionality and informat
 class SDVector2
 {
 public:
-	SDVector2(std::string vectorName,float x,float y);
+	SDVector2();
+	SDVector2(float x,float y);
 	~SDVector2();
 
 	void PrintVector(float x, float y);
 	void DrawVector();
 
 	//getters
-	float& GetX() { return m_x; }
-	float& GetY() { return m_y; }
+	const float GetX()const { return m_x; }
+	const float GetY()const { return m_y; }
 
 	//setters
 	void SetX(float x) { m_x = x; }
 	void SetY(float y) { m_y = y; }
+	void Set(float x = 0.0f, float y = 0.0f) { m_x = x, m_y = y; }
 
+	//useful vector functions
+	float Length();
+	float LengthSquared();
+	void Normalize();
+
+	//TODO:add vector operation functions...
 
 private:
 	float m_x;

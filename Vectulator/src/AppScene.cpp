@@ -1,5 +1,6 @@
 #include "AppScene.h"
 #include <iostream>
+#include "SDVector.h"
 
 AppScene::AppScene():
 	m_x(0),
@@ -51,6 +52,7 @@ void AppScene::Render()
 	m_window.BeginRender(0,0,0);
 	m_graphics.DrawLine(*m_window.GetRenderer(),0,0,800,600);
 	m_graphics.DrawLine(*m_window.GetRenderer(), 800, 0, 0, 600,255,0,0);
+	m_graphics.DrawLine(*m_window.GetRenderer(), SDVector2(400, 0), SDVector2(400, 600),255,255,0);
 	//SDL_RenderDrawLine(m_renderer, 0, 0, 800, 600);
 
 	m_window.EndRender();
