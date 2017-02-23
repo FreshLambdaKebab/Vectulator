@@ -21,13 +21,10 @@ void AppScene::Init()
 
 	m_window.CreateWindow("Vectulator ~ Developed by Stefan Duranski", m_screenWidth, m_screenHeight);
 
-	/*char c;
-	std::cout << "****Welcome to Vectulator!****\nEnter any key to start!" << std::endl;
-	std::cin >> c;
 	printf("Set X coord for vector1: ");
 	std::cin >> m_x;
 	printf("Set Y coord for vector1: ");
-	std::cin >> m_y;*/
+	std::cin >> m_y;
 
 }
 
@@ -50,10 +47,11 @@ void AppScene::Render()
 
 	//draw everything here
 	m_window.BeginRender(0,0,0);
-	m_graphics.DrawLine(*m_window.GetRenderer(),0,0,800,600);
-	m_graphics.DrawLine(*m_window.GetRenderer(), 800, 0, 0, 600,255,0,0);
-	m_graphics.DrawLine(*m_window.GetRenderer(), SDVector2(400, 0), SDVector2(400, 600),255,255,0);
-	//SDL_RenderDrawLine(m_renderer, 0, 0, 800, 600);
+	//draw all the test lines
+	m_graphics.DrawLine(*m_window.GetRenderer(),SDVector2(0,300),SDVector2(800,300),255,0,0);
+	m_graphics.DrawLine(*m_window.GetRenderer(), SDVector2(400, 0), SDVector2(400, 600), 0, 0, 255);
+	//draw the vector
+	m_graphics.DrawLine(*m_window.GetRenderer(), SDVector2(400, 300), SDVector2(400 + m_x, 300 - m_y),255,255,0);
 
 	m_window.EndRender();
 }
