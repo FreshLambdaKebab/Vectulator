@@ -27,8 +27,17 @@ private:
 	State m_state;
 	int m_screenWidth;
 	int m_screenHeight;
+	SDL_Rect m_cameraRect = { 0,0,800,600 };
 
-	//x and y coords for the vector
+	//initialize the two vectors
+	SDVector2 vec1;
+	SDVector2 vec2;
+	SDVector2 resultantVec;
+
+	//x and y coords for the vectors
+	float m_vec1X, m_vec1Y;
+	float m_vec2X, m_vec2Y;
+
 	float m_x;
 	float m_y;
 };

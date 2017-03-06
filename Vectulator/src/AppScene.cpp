@@ -1,6 +1,8 @@
 #include "AppScene.h"
 #include <iostream>
 #include "SDVector.h"
+//using c standard library(6/3/17)
+#include <cstdlib>
 
 AppScene::AppScene():
 	m_x(0),
@@ -22,9 +24,19 @@ void AppScene::Init()
 	m_window.CreateWindow("Vectulator ~ Developed by Stefan Duranski", m_screenWidth, m_screenHeight);
 
 	printf("Set X coord for vector1: ");
-	std::cin >> m_x;
+	std::cin >> m_vec1X;
+	vec1.SetX(m_vec1X);
 	printf("Set Y coord for vector1: ");
-	std::cin >> m_y;
+	std::cin >> m_vec1Y;
+	vec1.SetY(m_vec1Y);
+
+	//get input for second vector
+	printf("Set X coord for vector2: ");
+	std::cin >> m_vec2X;
+	vec2.SetX(m_vec2X);
+	printf("Set Y coord for vector2: ");
+	std::cin >> m_vec2Y;
+	vec2.SetY(m_vec2Y);
 
 }
 
@@ -47,11 +59,16 @@ void AppScene::Render()
 
 	//draw everything here
 	m_window.BeginRender(0,0,0);
-	//draw all the test lines
+	//draw all the test lines(Axis lines)
 	m_graphics.DrawLine(*m_window.GetRenderer(),SDVector2(0,300),SDVector2(800,300),255,0,0);
 	m_graphics.DrawLine(*m_window.GetRenderer(), SDVector2(400, 0), SDVector2(400, 600), 0, 0, 255);
-	//draw the vector
-	m_graphics.DrawLine(*m_window.GetRenderer(), SDVector2(400, 300), SDVector2(400 + m_x, 300 - m_y),255,255,0);
+
+	//draw vector 1
+	m_graphics.DrawLine(*m_window.GetRenderer(), SDVector2(400, 300), SDVector2(400 + vec1.GetX(), 300 - vec1.GetY()),255,255,0);
+
+	//draw vector 2
+	m_graphics.DrawLine(*m_window.GetRenderer(), SDVector2(400 + vec1.GetX(), 300 - vec1.GetY()),//implemented vec2 to be drawn on the tip of vector 1(6/3/17)
+						SDVector2(400 + vec1.GetX() + vec2.GetX(), 300 - vec1.GetY() - vec2.GetY()), 255, 0, 255);
 
 	m_window.EndRender();
 }

@@ -37,7 +37,7 @@ private:
 	float m_x;
 	float m_y;
 	std::string m_vectorName;
-	//sf::Vertex line;
+	
 };
 
 #endif

@@ -1,5 +1,8 @@
-﻿  Graphics.cpp
-c:\users\duran_000\skydrive\documents\visual studio 2015\projects\vectulator\vectulator\src\graphics.cpp(27): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\duran_000\skydrive\documents\visual studio 2015\projects\vectulator\vectulator\src\graphics.cpp(34): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+﻿  AppScene.cpp
+  Generating Code...
+  Compiling...
+  main.cpp
+  Generating Code...
+  LINK : C:\Users\duran_000\SkyDrive\Documents\Visual Studio 2015\Projects\Vectulator\Vectulator\Debug\Vectulator.exe not found or not built by the last incremental link; performing full link
   Vectulator.vcxproj -> C:\Users\duran_000\SkyDrive\Documents\Visual Studio 2015\Projects\Vectulator\Vectulator\Debug\Vectulator.exe
   Vectulator.vcxproj -> C:\Users\duran_000\SkyDrive\Documents\Visual Studio 2015\Projects\Vectulator\Vectulator\Debug\Vectulator.pdb (Full PDB)
