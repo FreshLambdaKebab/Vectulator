@@ -70,6 +70,12 @@ void AppScene::Render()
 	m_graphics.DrawLine(*m_window.GetRenderer(), SDVector2(400 + vec1.GetX(), 300 - vec1.GetY()),//implemented vec2 to be drawn on the tip of vector 1(6/3/17)
 						SDVector2(400 + vec1.GetX() + vec2.GetX(), 300 - vec1.GetY() - vec2.GetY()), 255, 0, 255);
 
+	//draw resultant vector
+	//draw the resulatant vector
+	m_graphics.DrawLine(*m_window.GetRenderer(), SDVector2(400, 300), SDVector2(400 + vec1.GetX() + vec2.GetX(),300 - vec1.GetY() - vec2.GetY()), 0, 255, 0);
+
+	
+
 	m_window.EndRender();
 }
 

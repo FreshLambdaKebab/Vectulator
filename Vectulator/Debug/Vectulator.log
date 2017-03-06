@@ -1,8 +1,4 @@
-﻿  AppScene.cpp
-  Generating Code...
-  Compiling...
-  main.cpp
-  Generating Code...
-  LINK : C:\Users\duran_000\SkyDrive\Documents\Visual Studio 2015\Projects\Vectulator\Vectulator\Debug\Vectulator.exe not found or not built by the last incremental link; performing full link
+﻿cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
+  AppScene.cpp
   Vectulator.vcxproj -> C:\Users\duran_000\SkyDrive\Documents\Visual Studio 2015\Projects\Vectulator\Vectulator\Debug\Vectulator.exe
   Vectulator.vcxproj -> C:\Users\duran_000\SkyDrive\Documents\Visual Studio 2015\Projects\Vectulator\Vectulator\Debug\Vectulator.pdb (Full PDB)
