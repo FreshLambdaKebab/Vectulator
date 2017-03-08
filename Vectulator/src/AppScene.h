@@ -20,6 +20,7 @@ public:
 	void Run();
 	void Render();
 	void Update();
+	void DisplayInfo();
 
 private:
 	Window m_window;
@@ -28,6 +29,7 @@ private:
 	int m_screenWidth;
 	int m_screenHeight;
 	SDL_Rect m_cameraRect = { 0,0,800,600 };
+	SDL_Rect m_viewPort;
 
 	//initialize the two vectors
 	SDVector2 vec1;
@@ -38,6 +40,7 @@ private:
 	float m_vec1X, m_vec1Y;
 	float m_vec2X, m_vec2Y;
 
+	//origin coordinates for vectors and axis
 	float m_x;
 	float m_y;
 };

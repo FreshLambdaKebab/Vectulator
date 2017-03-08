@@ -60,3 +60,13 @@ void SDVector2::Normalize()
 	m_y /= length;
 }
 
+SDVector2 SDVector2::Add(const SDVector2 & vec1, const SDVector2 & vec2)
+{
+	SDVector2 resultantVec;
+	
+	resultantVec.m_x = vec1.m_x + vec2.m_x;
+	resultantVec.m_y = vec1.m_y + vec2.m_y;
+	
+	return resultantVec;
+}
+

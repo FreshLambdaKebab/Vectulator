@@ -31,7 +31,10 @@ public:
 	float LengthSquared();
 	void Normalize();
 
-	//TODO:add vector operation functions...
+	//operational operators
+
+
+	SDVector2 Add(const SDVector2& vec1,const SDVector2& vec2);
 
 private:
 	float m_x;

@@ -38,6 +38,17 @@ void AppScene::Init()
 	std::cin >> m_vec2Y;
 	vec2.SetY(m_vec2Y);
 
+	//TODO:implement addition functionality
+
+	//setup viewport
+	m_viewPort.x = 0;
+	m_viewPort.y = 0;
+	m_viewPort.w = m_screenWidth;
+	m_viewPort.h = m_screenHeight;
+
+	m_x = 200;
+	m_y = 450;
+
 }
 
 void AppScene::Run()
@@ -47,6 +58,7 @@ void AppScene::Run()
 	{   //update and render the application every frame
 		Update();
 		Render();
+		//DisplayInfo();
 	}
 
 }
@@ -59,22 +71,24 @@ void AppScene::Render()
 
 	//draw everything here
 	m_window.BeginRender(0,0,0);
+
+	//render the view port
+	SDL_RenderSetViewport(m_window.GetRenderer(), &m_viewPort);
+
 	//draw all the test lines(Axis lines)
-	m_graphics.DrawLine(*m_window.GetRenderer(),SDVector2(0,300),SDVector2(800,300),255,0,0);
-	m_graphics.DrawLine(*m_window.GetRenderer(), SDVector2(400, 0), SDVector2(400, 600), 0, 0, 255);
+	m_graphics.DrawLine(*m_window.GetRenderer(),SDVector2(0,m_y),SDVector2(800,m_y),255,0,0);
+	m_graphics.DrawLine(*m_window.GetRenderer(), SDVector2(m_x, 0), SDVector2(m_x, 600), 0, 0, 255);
 
 	//draw vector 1
-	m_graphics.DrawLine(*m_window.GetRenderer(), SDVector2(400, 300), SDVector2(400 + vec1.GetX(), 300 - vec1.GetY()),255,255,0);
+	m_graphics.DrawLine(*m_window.GetRenderer(), SDVector2(m_x, m_y), SDVector2(m_x + vec1.GetX(), m_y - vec1.GetY()),255,255,0);
 
 	//draw vector 2
-	m_graphics.DrawLine(*m_window.GetRenderer(), SDVector2(400 + vec1.GetX(), 300 - vec1.GetY()),//implemented vec2 to be drawn on the tip of vector 1(6/3/17)
-						SDVector2(400 + vec1.GetX() + vec2.GetX(), 300 - vec1.GetY() - vec2.GetY()), 255, 0, 255);
+	m_graphics.DrawLine(*m_window.GetRenderer(), SDVector2(m_x + vec1.GetX(), m_y - vec1.GetY()),//implemented vec2 to be drawn on the tip of vector 1(6/3/17)
+						SDVector2(m_x + vec1.GetX() + vec2.GetX(), m_y - vec1.GetY() - vec2.GetY()), 255, 0, 255);
 
 	//draw resultant vector
 	//draw the resulatant vector
-	m_graphics.DrawLine(*m_window.GetRenderer(), SDVector2(400, 300), SDVector2(400 + vec1.GetX() + vec2.GetX(),300 - vec1.GetY() - vec2.GetY()), 0, 255, 0);
-
-	
+	m_graphics.DrawLine(*m_window.GetRenderer(), SDVector2(m_x, m_y), SDVector2(m_x + vec1.GetX() + vec2.GetX(),m_y - vec1.GetY() - vec2.GetY()), 0, 255, 0);
 
 	m_window.EndRender();
 }
@@ -97,6 +111,14 @@ void AppScene::Update()
 		{
 			m_state = State::EXIT;
 		}
+		
 	}
 
+}
+
+void AppScene::DisplayInfo()
+{
+	resultantVec.Set(vec1.GetX() + vec2.GetX(), vec1.GetY() + vec2.GetY());
+	std::cout << "-----------------------------------------\n";
+	printf("Resultant vector co-ords- X:%f Y:%f", resultantVec.GetX(), resultantVec.GetY());
 }
