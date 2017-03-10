@@ -16,11 +16,8 @@ SDVector2::~SDVector2()
 {
 }
 
-void SDVector2::PrintVector(float x, float y)
+void SDVector2::PrintVector(std::string name)
 {
-	m_x = x;
-	m_y = y;
-
 	std::cout << m_vectorName.c_str() << "(" << m_x << "," << m_y << ")" << std::endl;
 }
 
@@ -58,6 +55,16 @@ void SDVector2::Normalize()
 	
 	m_x /= length;
 	m_y /= length;
+}
+
+SDVector2 SDVector2::operator+(const SDVector2 & vec)
+{
+	//create a temporary vector to add onto desired vector
+	SDVector2 tempVec = *this;//it equals a dereferenced pointer to this class
+	tempVec.m_x += vec.m_x;
+	tempVec.m_y += vec.m_y;
+
+	return tempVec;
 }
 
 SDVector2 SDVector2::Add(const SDVector2 & vec1, const SDVector2 & vec2)

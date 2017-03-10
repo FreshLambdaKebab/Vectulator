@@ -154,12 +154,16 @@
     <ClCompile Include="src\AppScene.cpp" />
     <ClCompile Include="src\Graphics.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\MenuScene.cpp" />
+    <ClCompile Include="src\SceneManager.cpp" />
     <ClCompile Include="src\SDVector.cpp" />
     <ClCompile Include="src\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\AppScene.h" />
     <ClInclude Include="src\Graphics.h" />
+    <ClInclude Include="src\MenuScene.h" />
+    <ClInclude Include="src\SceneManager.h" />
     <ClInclude Include="src\SDVector.h" />
     <ClInclude Include="src\Window.h" />
   </ItemGroup>

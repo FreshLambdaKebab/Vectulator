@@ -12,11 +12,15 @@
     <ClCompile Include="src\AppScene.cpp" />
     <ClCompile Include="src\Window.cpp" />
     <ClCompile Include="src\Graphics.cpp" />
+    <ClCompile Include="src\MenuScene.cpp" />
+    <ClCompile Include="src\SceneManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\SDVector.h" />
     <ClInclude Include="src\AppScene.h" />
     <ClInclude Include="src\Window.h" />
     <ClInclude Include="src\Graphics.h" />
+    <ClInclude Include="src\MenuScene.h" />
+    <ClInclude Include="src\SceneManager.h" />
   </ItemGroup>
 </Project>

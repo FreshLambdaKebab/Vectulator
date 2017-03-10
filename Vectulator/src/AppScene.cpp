@@ -29,6 +29,7 @@ void AppScene::Init()
 	printf("Set Y coord for vector1: ");
 	std::cin >> m_vec1Y;
 	vec1.SetY(m_vec1Y);
+	vec1.PrintVector("Vector1");
 
 	//get input for second vector
 	printf("Set X coord for vector2: ");
@@ -37,6 +38,8 @@ void AppScene::Init()
 	printf("Set Y coord for vector2: ");
 	std::cin >> m_vec2Y;
 	vec2.SetY(m_vec2Y);
+	vec2.PrintVector("Vector2");
+	DisplayInfo();
 
 	//TODO:implement addition functionality
 
@@ -118,7 +121,7 @@ void AppScene::Update()
 
 void AppScene::DisplayInfo()
 {
-	resultantVec.Set(vec1.GetX() + vec2.GetX(), vec1.GetY() + vec2.GetY());
-	std::cout << "-----------------------------------------\n";
+	resultantVec = vec1 + vec2;
+	std::cout << "--------------------------------------------------\n";
 	printf("Resultant vector co-ords- X:%f Y:%f", resultantVec.GetX(), resultantVec.GetY());
 }

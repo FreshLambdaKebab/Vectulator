@@ -14,7 +14,7 @@ public:
 	SDVector2(float x,float y);
 	~SDVector2();
 
-	void PrintVector(float x, float y);
+	void PrintVector(std::string name);
 	void DrawVector();
 
 	//getters
@@ -32,6 +32,7 @@ public:
 	void Normalize();
 
 	//operational operators
+	SDVector2 operator + (const SDVector2& vec);
 
 
 	SDVector2 Add(const SDVector2& vec1,const SDVector2& vec2);

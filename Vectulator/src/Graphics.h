@@ -3,7 +3,7 @@
 #include "Window.h"
 #include "SDVector.h"
 
-class Graphics
+class Graphics : public SDVector2
 {
 public:
 	Graphics();
