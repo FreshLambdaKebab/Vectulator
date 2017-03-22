@@ -2,7 +2,6 @@
 
 #include <SDL\SDL.h>
 #include <string>
-#include <GL\glew.h>
 
 class Window
 {

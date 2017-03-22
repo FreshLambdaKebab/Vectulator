@@ -15,7 +15,7 @@ AppScene::AppScene():
 
 AppScene::~AppScene()
 {
-	m_soundEngine->drop();
+
 }
 
 void AppScene::Init()
@@ -110,8 +110,7 @@ void AppScene::Init()
 
 	m_x = 200;
 	m_y = 450;
-	//initialize the sound engine
-	m_soundEngine->play2D("res/Developers.mp3", GL_TRUE);
+
 
 }
 
@@ -128,10 +127,6 @@ void AppScene::Run()
 
 void AppScene::Render()
 {
-	glClearDepth(1.0f);
-	//clear color and depth buffer
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
 	//draw everything here
 	m_window.BeginRender(0,0,0);
 

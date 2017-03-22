@@ -4,10 +4,6 @@
 //#include "Window.h"
 #include "Graphics.h"
 
-//testing random music thing
-#include <irrklang\irrKlang.h>
-using namespace irrklang;
-
 enum class State
 {
 	APP,
@@ -57,8 +53,6 @@ private:
 	//opration char
 	char op;
 
-	//random song thing
-	ISoundEngine* m_soundEngine = createIrrKlangDevice();
 };
 
 #endif
