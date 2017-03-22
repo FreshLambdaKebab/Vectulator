@@ -33,8 +33,11 @@ public:
 
 	//operational operators
 	SDVector2 operator + (const SDVector2& vec);
+	SDVector2 operator - (const SDVector2& vec);
+	SDVector2 operator / (const SDVector2& vec);
+	//multiplication will use the dot product
 
-
+	float dot(const SDVector2& vec);
 	SDVector2 Add(const SDVector2& vec1,const SDVector2& vec2);
 
 private:

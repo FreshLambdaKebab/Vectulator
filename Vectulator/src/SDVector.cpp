@@ -67,6 +67,31 @@ SDVector2 SDVector2::operator+(const SDVector2 & vec)
 	return tempVec;
 }
 
+SDVector2 SDVector2::operator-(const SDVector2 & vec)
+{
+	SDVector2 tempVec = *this;
+	tempVec.m_x -= vec.m_x;
+	tempVec.m_y -= vec.m_y;
+
+	return tempVec;
+}
+
+/*
+-https://www.symbolab.com/solver/vector-add-subtract-calculator/%5Cleft(100%2C50%5Cright)%20%5Ccdot%20%5Cleft(20%2C100%5Cright)
+*/
+
+/*SDVector2 SDVector2::operator/(const SDVector2 & vec)
+{
+	
+}*/
+
+float SDVector2::dot(const SDVector2 & vec)
+{
+	float dot = m_x * vec.m_x + m_y * vec.m_y;
+
+	return dot;
+}
+
 SDVector2 SDVector2::Add(const SDVector2 & vec1, const SDVector2 & vec2)
 {
 	SDVector2 resultantVec;

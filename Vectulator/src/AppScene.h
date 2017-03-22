@@ -4,6 +4,10 @@
 //#include "Window.h"
 #include "Graphics.h"
 
+//testing random music thing
+#include <irrklang\irrKlang.h>
+using namespace irrklang;
+
 enum class State
 {
 	APP,
@@ -20,7 +24,13 @@ public:
 	void Run();
 	void Render();
 	void Update();
-	void DisplayInfo();
+
+	//functions to display info
+	void DisplayAddInfo();
+	void DisplaySubInfo();
+	//void DisplayDivInfo();
+	void DisplayMultInfo();
+
 
 private:
 	Window m_window;
@@ -43,6 +53,12 @@ private:
 	//origin coordinates for vectors and axis
 	float m_x;
 	float m_y;
+
+	//opration char
+	char op;
+
+	//random song thing
+	ISoundEngine* m_soundEngine = createIrrKlangDevice();
 };
 
 #endif

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _GRAPHICS_H
+#define _GRAPHICS_H
 #include <SDL\SDL.h>
 #include "Window.h"
 #include "SDVector.h"
@@ -21,3 +22,4 @@ private:
 	
 };
 
+#endif
